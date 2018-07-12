@@ -1,0 +1,14 @@
+site_name: GLPI for N'Py
+theme: readthedocs
+pages:
+        - Accueil: index.md
+        - Installation de LAMP: installLAMP.md
+        - Installation de GLPI: installGLPI.md
+        - Installation de FusionInventory: installFI.md
+        - Déploiement des agents: agentsFI.md
+        - Découverte et inventaire réseau: decouvInv.md
+        - Gestion du multi-sites: multiSites.md
+        - Déploiement d'une application: deploiementAppli.md
+        - Gestion générale: gestionGenerale.md
+        - Mises à jour: maj.md
+        - Plugins supplémentaires: plugins.md        

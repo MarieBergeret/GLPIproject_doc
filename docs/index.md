@@ -25,3 +25,9 @@ Une ligne issue d’un fichier sera écrite sous la forme :
 - [Forum GLPI](http://forum.glpi-project.org/)
 - [Forum FusionInventory](http://forum.fusioninventory.org/)
 - [Plugins GLPI](http://plugins.glpi-project.org/#/)
+
+---
+
+*Marie Bergeret  
+juillet 2018*
+

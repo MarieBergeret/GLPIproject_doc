@@ -2,7 +2,7 @@
 
 ## Précisions
 
-Ce document fournit un appui à l’implémentation de GLPI et de son plugin d’inventaire FusionInventory. L’installation s’effectue sur une distribution Ubuntu 16.04 avec les dernières versions à ce jour de GLPI et de FusionInventory, à savoir respectivement la 9.2.3 et la 9.2+2.0. L’agent Linux utilisé est la version 2.4-2. De plus, le serveur sera équipé de l’environnement Apache-MySQL-PHP7.
+Ce document fournit un appui à l’implémentation de GLPI et de son plugin d’inventaire FusionInventory. L’installation s’effectue sur une distribution Ubuntu 16.04 avec les dernières versions à ce jour de GLPI et de FusionInventory, à savoir respectivement la 9.2.3 et la 9.2+2.0. L’agent Linux utilisé est la version 2.4-2. De plus, le serveur sera équipé de l’environnement Apache-MySQL-PHP.
 
 ---
 
@@ -30,4 +30,5 @@ Une ligne issue d’un fichier sera écrite sous la forme :
 
 *Marie Bergeret  
 juillet 2018*
+
 

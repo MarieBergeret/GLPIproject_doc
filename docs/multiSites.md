@@ -56,7 +56,7 @@ Une règle doit être créée dans *Administration > FusionInventory* et *Règle
 </p>
 
 Cela va pouvoir permettre la gestion des entités par des administrateurs distincts. Un super-admin pourra ainsi administrer tout le parc et un admin peut être assigné à sa sous-entité, donc son site.  
-Pour assigner un administrateur à une entité, se rendre sur l'entité à modifier puis dans l'onglet Utilisateurs et ajouter un utilisateur déjà créé. Dans le cas d'un nouvel utilisateur, le créer au préalable dans *Administration > Utilisateurs*.
+Pour assigner un administrateur à une entité, se rendre sur l'entité à modifier puis dans l'onglet *Utilisateurs* et ajouter un utilisateur déjà créé. Dans le cas d'un nouvel utilisateur, le créer au préalable dans *Administration > Utilisateurs*.
 <p align=center>
 ![Utilisateur entité](/img/multiSites/utilisateurEntite.png "utilisateur entité")  
 <caption>*__figure__ : ajout d'un utilisateur à l'entité*</caption>

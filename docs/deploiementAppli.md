@@ -16,7 +16,7 @@ Il est maintenant nécessaire d'exécuter des commandes pour installer le logici
 <caption>*__figure__ : déploiement silencieux du paquet*</caption>
 </p>
 
-Afin de déployer sur toutes les machines, une nouvelle tâche doit être créée. Sous l'onglet Tâches de FusionInventory instaurer une nouvelle tâche de déploiement dont le job prendra pour cible le paquet créé précédemment et dont les acteurs seront les postes sur lesquels déployer.
+Afin de déployer sur toutes les machines, une nouvelle tâche doit être créée. Sous l'onglet *Tâches* de FusionInventory instaurer une nouvelle tâche de déploiement dont le job prendra pour cible le paquet créé précédemment et dont les acteurs seront les postes sur lesquels déployer.
 <p align=center>
 ![Tâche déploiement](/img/deploiementAppli/tacheDeploiement.png "tâche déploiement")  
 <caption>*__figure__ : création d'une tâche de déploiement*</caption>

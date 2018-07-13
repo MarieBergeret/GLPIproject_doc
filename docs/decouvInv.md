@@ -2,7 +2,7 @@
 
 ## Paramétrage des agents
 
-La découverte et l'inventaire réseau se font grâce aux remontées des agents. Pour cela, il faut spécifier les actions qu'un agent est autorisé à réaliser. Il faut se rendre dans *Administration > FusionInventory* puis *Général > Gestion des agents* et sélectionner l'agent concerné. Dans l'onglet Modules des agents, cocher les modules souhaités et mettre à jour.  
+La découverte et l'inventaire réseau se font grâce aux remontées des agents. Pour cela, il faut spécifier les actions qu'un agent est autorisé à réaliser. Il faut se rendre dans *Administration > FusionInventory* puis *Général > Gestion des agents* et sélectionner l'agent concerné. Dans l'onglet *Modules des agents*, cocher les modules souhaités et mettre à jour.  
 Les différents modules permettent de :
 
 - WakeOnLan : réveil des ordinateurs à distance
@@ -56,7 +56,7 @@ La découverte et l'inventaire réseau peuvent prendre plusieurs minutes. Afin d
 <caption>*__figure__ : suivi de l'exécution d'une tâche de découverte*</caption>
 </p>
 
-Les équipements trouvés se situent désormais dans l'inventaire. Pour les visionner, se rendre dans l'onglet Parc de GLPI. Les informations récupérées par les agents permettent d'affecter automatiquement les machines dans les bons types et de remplir ses caractéristiques. Si un agent ne récupère pas assez d'informations (au minimum le type) l'équipement sera situé dans l'onglet *Parc > Equipement non-géré*. Il est possible de remplir les informations à la main et de faire un import. Il est à noter que certains éléments peuvent ne pas être connus par FusionInventory. Cependant, les développeurs rajoutent des machines à chaque release afin de combler ces lacunes.
+Les équipements trouvés se situent désormais dans l'inventaire. Pour les visionner, se rendre dans l'onglet *Parc* de GLPI. Les informations récupérées par les agents permettent d'affecter automatiquement les machines dans les bons types et de remplir ses caractéristiques. Si un agent ne récupère pas assez d'informations (au minimum le type) l'équipement sera situé dans l'onglet *Parc > Equipement non-géré*. Il est possible de remplir les informations à la main et de faire un import. Il est à noter que certains éléments peuvent ne pas être connus par FusionInventory. Cependant, les développeurs rajoutent des machines à chaque release afin de combler ces lacunes.
 
 ## Gestion des règles d'import
 
@@ -87,7 +87,7 @@ Dans l'onglet *Administration > FusionInventory* et *Règle > Matériel ignoré 
 
 ## Indications sur les imprimantes
 
-A la fin d'une découverte réseau, des imprimantes peuvent être apparues. Il est possible de visualiser les niveaux d'encre en se rendant sur l'imprimante puis dans l'onglet FusionInventory SNMP. Les pages imprimées peuvent être également consultables en se rendant dans l'imprimante puis sur l'intitulé "Compteur de pages actuel".
+A la fin d'une découverte réseau, des imprimantes peuvent être apparues. Il est possible de visualiser les niveaux d'encre en se rendant sur l'imprimante puis dans l'onglet *FusionInventory SNMP*. Les pages imprimées peuvent être également consultables en se rendant dans l'imprimante puis sur l'intitulé "Compteur de pages actuel".
 
 ## Indications sur les téléphones
 Seuls les téléphones IP seront inventoriés dans l'onglet *Parc > Téléphones*. Les mobiles nécessitent le déploiement d'un agent, comme l'agent [Android](http://fusioninventory.org/documentation/agent/installation/android.html), et seront visibles dans l'onglet *Parc > Ordinateurs*.

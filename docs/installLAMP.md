@@ -14,7 +14,9 @@ Pour vérifier sa bonne installation, ouvrir un navigateur web et se rendre sur 
 MySQL peut être installé par la commande suivante :
 `sudo apt-get install mysql-server`.
 
-La version de MySQL peut être connue par `mysql -V`.
+!!! note
+
+	La version de MySQL peut être connue par `mysql -V`.
 
 ## Installation de PHP
 
@@ -24,7 +26,9 @@ GLPI nécessite au minimum la version 5.9 de PHP. Afin de pouvoir utiliser les c
 Ainsi la dernière version de PHP ainsi que les modules nécessaires peuvent être installés :  
 `sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql php-cgi php-curl php-json`.
 
-La version de PHP peut être connue par `php -v`.
+!!! note
+
+	La version de PHP peut être connue par `php -v`.
 
 ## Gestion du serveur web
 

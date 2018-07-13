@@ -1,5 +1,7 @@
 site_name: GLPI for N'Py
 theme: readthedocs
+markdown_extensions:
+        - admonition
 pages:
         - Accueil: index.md
         - Installation de LAMP: installLAMP.md

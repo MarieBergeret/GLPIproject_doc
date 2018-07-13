@@ -1,6 +1,6 @@
 # Plugins supplémentaires
 
-Afin de faire de la supervision, c’est à dire la visualisation graphique des éléments de l’inventaire ou encore la gestion des rapports de bugs, il peut être utile de rajouter des plugins à GLPI. Il est à noter que les plugins sont liés aux versions de GLPI, faire attention aux dates de release des plugins.
+Afin de faire de la supervision, c’est à dire la visualisation graphique des éléments de l’inventaire ou encore la gestion des rapports de bugs, il peut être utile de rajouter des plugins à GLPI. Il est à noter que les plugins sont liés aux versions de GLPI. Il est important de faire attention aux dates de release des plugins.
 
 ## More Reporting
 

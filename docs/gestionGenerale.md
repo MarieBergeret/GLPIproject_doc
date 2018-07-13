@@ -44,3 +44,19 @@ Les équipements gérés par l'inventaire peuvent être réservés. Pour autoris
 <p align=center>
 <caption>*__figure__ : réservation d'un ordinateur*</caption>
 </p>
+
+## Gestion des groupes
+
+En plus de créer des entités qui sépareront les ordinateurs de chaque site, il est possible de créer des groupes afin de faciliter le déploiement d'applications particulières à un domaine. Pour cela, se rendre dans *Administration > Groupes* et paramétrer le groupe.
+
+![Création groupe](/img/gestionGenerale/creationGroupe.png "création groupe")
+<p align=center>
+<caption>*__figure__ : création du groupe des commerciaux*</caption>
+</p>
+
+Ainsi, pour affecter un ordinateur à un groupe, consulter la fiche de l'ordinateur et l'associer au groupe souhaité.
+
+![Associer ordinateur à groupe](/img/gestionGenerale/ordinateurGroupe.png "associer ordinateur à groupe")
+<p align=center>
+<caption>*__figure__ : affectation d'un ordinateur au groupe des commerciaux*</caption>
+</p> 

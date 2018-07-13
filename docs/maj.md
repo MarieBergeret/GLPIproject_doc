@@ -11,9 +11,8 @@ Les versions de GLPI et de FusionInventory sont très liées. Il faut d'abord me
 ## Mise à jour de FusionInventory
 
 La mise à jour de GLPI est terminée, celle de FusionInventory peut être traitée. Tout d'abord, télécharger la dernière version sur le Git et la décompresser dans le dossier /var/www/glpi/plugins/. Puis se rendre sur GLPI et dans *Administration > Plugins* puis mettre à jour FusionInventory.
-
-![MàJ FI](/img/maj/majFI.png "màj FI")
 <p align=center>
+![MàJ FI](/img/maj/majFI.png "màj FI")  
 <caption>*__figure__ : mise à jour de FusionInventory*</caption>
 </p>
 

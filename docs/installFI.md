@@ -18,6 +18,8 @@ Le plugin apparaît maintenant sous l'onglet *Configuration > Plugins*. Il faut 
 <p align="center">
 ![Installation FI](/img/installFI/installationFI.png "installation FI")
 <caption>*__figure__ : installation du plugin FusionInventory*</caption>
+</p>
+<p align=center>
 ![Activation FI](/img/installFI/activationFI.png "activation FI")
 <caption>*__figure__ : activation du plugin FusionInventory*</caption>
 </p>

@@ -5,18 +5,16 @@ Afin de faire de la supervision, c’est à dire la visualisation graphique des 
 ## More Reporting
 
 Le plugin More reporting, téléchargeable à [cette adresse](http://plugins.glpi-project.org/#/plugin/mreporting), permet la visualisation de graphiques résumant, par exemple, les ordinateurs par OS ou les versions des agents utilisés. Après activation, il sera disponible dans l’onglet *Outils > Plus de rapports*.
-
-![More Reporting](/img/plugins/moreReporting.png "more reporting")
 <p align=center>
+![More Reporting](/img/plugins/moreReporting.png "more reporting")  
 <caption>*__figure__ : exemple des graphiques concernant l'OS*</caption>
 </p>
 
 ## IP Report
 
 Le plugin IPReport, disponible à [cette adresse](http://plugins.glpi-project.org/#/plugin/addressing), permet quant à lui de visualiser les adresses IP libres, les IP attribuées ainsi que les éventuels doublons. Il est disponible sous l’onglet *Outils > Adressage IP*.
-
-![IP Report](/img/plugins/IPReport.png "IP report")
 <p align=center>
+![IP Report](/img/plugins/IPReport.png "IP report")  
 <caption>*__figure__ : visualisation d'une IP en double, occupée et libre*</caption>
 </p>
 

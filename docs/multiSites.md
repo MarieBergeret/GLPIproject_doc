@@ -5,9 +5,8 @@ La gestion multi-sites permet de répertorier sur une seule application GLPI tou
 ## Ajout des plages IP
 
 En vue de faire l'inventaire de sites distants, il est essentiel de connaître les plages IP des différents sites et de créer les plages IP associées. Puis, dans les tâches créées précédement, il est nécessaire d'ajouter ces nouvelles cibles dans les jobs.
-
-![Ajout cible](/img/multiSites/ajoutCible.png "ajout cible")
 <p align=center>
+![Ajout cible](/img/multiSites/ajoutCible.png "ajout cible")  
 <caption>*__figure__ : ajout d'une cible supplémentaire dans les jobs*</caption>
 </p>
 
@@ -41,21 +40,18 @@ Et y ajouter la ligne suivante qui va permettre de vérifier si le certificat ex
 ## Configuration des entités
 
 Afin d'organiser les machines dans les différents sites il est possible de créer des entités auxquelles les rattacher. Celles-ci peuvent être ajoutées sous l'onglet *Administration > Entités*.
-
-![Entités mère-filles](/img/multiSites/entites.png "entités mère-fille")
 <p align=center>
+![Entités mère-filles](/img/multiSites/entites.png "entités mère-fille")  
 <caption>*__figure__ : entités mère et filles*</caption>
 </p>
 
 Une règle doit être créée dans *Administration > FusionInventory* et *Règles > Règles sur l'entité "ordinateur"*. Le critère principal sera relié à la plage IP du site et l'action permettra de placer l'équipement dans la bonne entité.
-
+<p align=center>
 ![Critère IP-entité](/img/multiSites/critereEntite.png "critère IP-entité")  
-<p align=center>
-<caption>*__figure__ : critère d'attribution de la plage IP à une entité*</caption>
+<caption>*__figure__ : critère d'attribution de la plage IP à une entité*</caption>  
 </p>
-
-![Action IP-entité](/img/multiSites/actionEntite.png "action IP-entité")  
 <p align=center>
+![Action IP-entité](/img/multiSites/actionEntite.png "action IP-entité")  
 <caption>*__figure__ : action pour assigner la plage IP à une entité*</caption>
 </p>
 

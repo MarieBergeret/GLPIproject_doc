@@ -3,11 +3,10 @@
 ## Mise à jour de GLPI
 
 Les versions de GLPI et de FusionInventory sont très liées. Il faut d'abord mettre à jour GLPI. Pour cela, se rendre dans *Administration > Maintenance* et sauvegarder la base de données en SQL. Puis dans /var/www/glpi créer un dossier "ancien" et y glisser tous les dossiers et fichiers contenus dans /var/www/glpi à l'exception du dossier "plugins". Après le téléchargement de la dernière version, extraire le dossier dans /var/www/glpi et se connecter à localhost/glpi. Suivre les étapes en sélectionnant "Mettre à jour" puis choisir la base de données à utiliser.
-
+<p align=center>
 ![MàJ GLPI](/img/maj/majGLPI.png "màj GLPI")  
-<p align="center">
 <caption>*__figure__ : mise à jour de la base "glpi"*</caption>
-</p>
+</div>
 
 ## Mise à jour de FusionInventory
 

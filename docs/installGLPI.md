@@ -2,7 +2,7 @@
 
 ## Récupération de l'archive
 
-La dernière version de GLPI est disponible sur le [Github](https://github.com/glpi-project/glpi/releases). Il est préférable de récupérer l'archive glpi-{version}.tar.bz2. Celle-ci est à déplacer dans le dossier du serveur Apache, à savoir /var/www, et à extraire.  
+La dernière version de GLPI est disponible sur le [Github](https://github.com/glpi-project/glpi/releases). Il est préférable de récupérer l'archive glpi-{version}.tar.bz2. Celle-ci est à déplacer dans le dossier du serveur Apache, à savoir /var/www/, et à extraire.  
 `sudo tar xfvj glpi-9.2.4.tar.bz2`
 
 Le dossier compressé peut être supprimé.  

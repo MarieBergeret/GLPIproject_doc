@@ -36,8 +36,8 @@ Editer la crontab : `sudo crontab -e`
 Et y ajouter la ligne suivante qui va permettre de vérifier si le certificat expire dans moins de 30 jours, tous les lundis à 23h50 et de le renouveler dans ce cas :  
 `50 23 * * 1 /usr/bin/certbot renew >> /var/log/certbot-renew.log`
 
-En plus de sécuriser le serveur en HTTPS, les agents doivent être liés à ce certificat. La démarche est explicitée [ici](http://fusioninventory.org/documentation/security.html).
-Le fichier de configuration de l'agent, situé dans /etc/fusioninventory/agent.cfg, doit être modifié. Pour cela, changer l'adresse contenue dans "server" par "https://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/".
+En plus de sécuriser le serveur en HTTPS, les agents doivent être liés à ce certificat. Il faudra notamment spécifier le chemin vers le certificat. La démarche est explicitée [ici](http://fusioninventory.org/documentation/security.html).
+Le fichier de configuration de l'agent, situé dans /etc/fusioninventory/agent.cfg, doit être modifié. Pour cela, changer l'adresse contenue dans "server" par "https://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/" ainsi que le chemin vers le certificat dans la variable "ca-cert-file".
 
 !!! note
 	Pour un certificat auto-signé, il sera nécessaire de passer la valeur "no-ssl-check" à 1.

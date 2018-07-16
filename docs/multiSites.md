@@ -15,7 +15,7 @@ En vue de faire l'inventaire de sites distants, il est essentiel de connaître l
 
 De plus, le pare-feu du site doit être ouvert aux agents sur le port 62354 et sur le port web 80 ou 443. Pour sécuriser la transmission des informations, il est conseillé de paramétrer Apache pour passer par le port HTTPS 443, comme expliqué ci-après. Le port des agents est modifiable sous l'onglet *Administration > FusionInventory* et *Général > Configuration générale*.
 
-La prise en compte de sites distants nécessite la sécurisation des données transitants entre GLPI et les agents déployés. Une modification de la configuration Apache doit être effectuée afin d'autoriser l'accès à GLPI en HTTPS. Pour cela, il convient de créer un certificat SSL. Les autorités ayant la possibilité de délivrer ces certificats ne les fournissent pas gratuitement, à l'exception de certains tel que Let's Encrypt. Il est tout de même possible de paramétrer un certificat auto-signé avec openssl. En plus de sécuriser le serveur en HTTPS, les agents doivent être liés à ce certificat. La démarche est explicitée [ici](http://fusioninventory.org/documentation/security.html).
+La prise en compte de sites distants nécessite la sécurisation des données transitants entre GLPI et les agents déployés. Une modification de la configuration Apache doit être effectuée afin d'autoriser l'accès à GLPI en HTTPS. Pour cela, il convient de créer un certificat SSL. Les autorités ayant la possibilité de délivrer ces certificats ne les fournissent pas gratuitement, à l'exception de certains tel que Let's Encrypt. Il est tout de même possible de paramétrer un certificat auto-signé avec openssl.
 
 Afin de faciliter le processus de certification, le script Certbot peut être utile. Il faut tout d'abord installer les paquets nécessaires puis lancer le script, qui affichera les domaines pour lesquels générer un certificat SSL.  
 `sudo apt-get update`  
@@ -36,6 +36,7 @@ Editer la crontab : `sudo crontab -e`
 Et y ajouter la ligne suivante qui va permettre de vérifier si le certificat expire dans moins de 30 jours, tous les lundis à 23h50 et de le renouveler dans ce cas :  
 `50 23 * * 1 /usr/bin/certbot renew >> /var/log/certbot-renew.log`
 
+En plus de sécuriser le serveur en HTTPS, les agents doivent être liés à ce certificat. La démarche est explicitée [ici](http://fusioninventory.org/documentation/security.html).
 Le fichier de configuration de l'agent, situé dans /etc/fusioninventory/agent.cfg, doit être modifié. Pour cela, changer l'adresse contenue dans "server" par "https://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/".
 
 !!! note

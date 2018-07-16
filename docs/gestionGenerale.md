@@ -2,7 +2,7 @@
 
 ## Activation des notifications
 
-Afin d'être averti d'éventuels problèmes survenant sur le réseau, il est possible d'activer les notifications par email. Pour cela, se rendre dans *Configurations > Notifications* puis activer le suivi et le suivi par courriel. L'intitulé "Configuration des suivis par courriel" apparaît afin de pouvoir entrer le mail de destination.
+Afin d'être averti d'éventuels problèmes survenant sur le réseau, il est possible d'activer les notifications par email. Aller dans *Configurations > Notifications* puis activer le suivi et le suivi par courriel. L'intitulé "Configuration des suivis par courriels" apparaît afin de pouvoir entrer le mail de destination.
 <p align=center>
 ![Activation notifications](/img/gestionGenerale/activationNotifications.png "activation notifications")  
 <caption>*__figure__ : activation des notifications*</caption>

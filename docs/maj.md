@@ -18,5 +18,14 @@ La mise à jour de GLPI est terminée, celle de FusionInventory peut être trait
 
 ## Mise à jour des agents
 
+### Mise à jour
+
 Concernant la mise à jour des agents, celle-ci peut se faire via une tâche de déploiement. Les agents seront remplacés par la nouvelle version au prochain inventaire de l’ordinateur. Un script, fourni par la communauté à [cette adresse](https://raw.githubusercontent.com/fusinv/fusioninventory-agent/2.3.x/contrib/windows/fusioninventory-agent-deployment.vbs), permet de remplacer l’ancienne version de l’agent. Il est nécessaire de paramétrer le script avec les versions de l’agent et de Windows grâce aux différentes variables Setup.
 
+Sous Linux, il est possible d'exécuter la commande : `sudo apt-get install fusioninventory-agent`.
+
+### Suppression
+
+Pour Linux, l'exécution de `sudo apt purge fusioninventory-agent` supprimera l'agent installé et tous ses fichiers de configuration.  
+Sous Mac, l'exécution de `sudo /opt/fusioninventory-agent/uninstaller.sh` permettra de supprimer l'agent installé.  
+Windows permet quant à lui la désinstallation via le panneau de configuration, dans l'option "désinstaller programme".

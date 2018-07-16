@@ -1,4 +1,4 @@
-## Déploiement des agents FusionInventory
+# Déploiement des agents FusionInventory
 
 Les agents permettent de récupérer les informations d'un ordinateur grâce au protocole SNMP. Dans un premier temps, un agent doit être installé sur le serveur Linux. La procédure d'installation est disponible pour les différents OS sur le site de FusionInventory. Ici, [celle-ci](http://fusioninventory.org/documentation/agent/installation/linux/deb.html) est utilisée.
 
@@ -23,7 +23,9 @@ Les lignes suivantes doivent être modifiées, en précisant l'IP publique de la
 Enfin, redémarrer l'agent :  
 `sudo systemctl restart fusioninventory-agent`
 
+## Déploiement de masse Windows
+
 Les agents peuvent être déployés sur les machines Windows à distance. Pour cela une GPO ordinateur et un script fourni par FusionInventory seront nécessaires. Le script, en vbs, est disponible à [cette adresse](https://raw.githubusercontent.com/fusioninventory/fusioninventory-agent/2.4.x/contrib/windows/fusioninventory-agent-deployment.vbs).  
 L'option /S va permettre le déploiement silencieux de l'agent. Il faudra en revanche rajouter l'option /M pour que l'agent soit visible dans le menu Démarrer de Windows. Il sera tout de même possible de voir le statut de l'agent sur chacun des postes en se rendant sur http://127.0.0.1:62354.
 
-Le déploiement de masse par GPO étant uniquement possible sur les machines Windows, il est tout de même possible d'utiliser un script SSH pour déployer les agents sur les ordinateurs Linux mais également sous Mac.
+Le déploiement de masse par GPO étant spécifique aux machines Windows, il reste  possible d'utiliser un script SSH pour déployer les agents sur les ordinateurs Linux mais également sous Mac.

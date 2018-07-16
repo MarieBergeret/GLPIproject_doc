@@ -1,6 +1,6 @@
 # Gestion du multi-sites
 
-La gestion multi-sites permet de répertorier sur une seule application GLPI toutes les machines de sites distants. L'application n'a pas besoin d'être installée sur plusieurs serveur.
+La gestion multi-sites permet de répertorier sur une seule application GLPI toutes les machines de sites distants. L'application n'a pas besoin d'être installée sur plusieurs serveurs.
 
 ## Ajout des plages IP
 
@@ -32,8 +32,7 @@ Le détail est visible sur [cette vidéo](https://www.youtube.com/watch?v=OLOfpU
 Le détail de la génération d'un certificat par Let's Encrypt, sans l'utilisation de Certbot, est disponible [ici](https://www.linode.com/docs/security/ssl/install-lets-encrypt-to-create-ssl-certificates/).
 
 Il est cependant à noter que le certificat ne durant que 90 jours, il faudra le mettre à jour. Pour cela, une tâche cron peut être paramétrée.  
-Editer la crontab :  
-`sudo crontab -e`  
+Editer la crontab : `sudo crontab -e`  
 Et y ajouter la ligne suivante qui va permettre de vérifier si le certificat expire dans moins de 30 jours, tous les lundis à 23h50 et de le renouveler dans ce cas :  
 `50 23 * * 1 /usr/bin/certbot renew >> /var/log/certbot-renew.log`
 
@@ -55,7 +54,7 @@ Une règle doit être créée dans *Administration > FusionInventory* et *Règle
 <caption>*__figure__ : action pour assigner la plage IP à une entité*</caption>
 </p>
 
-Cela va pouvoir permettre la gestion des entités par des administrateurs distincts. Un super-admin pourra ainsi administrer tout le parc et un admin peut être assigné à sa sous-entité, donc son site.  
+Cela va pouvoir permettre la gestion des entités par des administrateurs distincts. Un super-admin pourra ainsi administrer tout le parc et un admin peut être assigné à une sous-entité, donc son site.  
 Pour assigner un administrateur à une entité, se rendre sur l'entité à modifier puis dans l'onglet *Utilisateurs* et ajouter un utilisateur déjà créé. Dans le cas d'un nouvel utilisateur, le créer au préalable dans *Administration > Utilisateurs*.
 <p align=center>
 ![Utilisateur entité](/img/multiSites/utilisateurEntite.png "utilisateur entité")  

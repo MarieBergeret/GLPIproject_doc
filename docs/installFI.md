@@ -4,7 +4,7 @@ FusionInventory est un plugin de GLPI permettant l'inventaire du matériel, la d
 
 ## Récupération de l'archive
 
-La dernière version de FusionInventory, à ce jour 9.2+2.0, doit être [téléchargée](http://plugins.glpi-project.org/#/plugin/fusioninventory). Le dossier glpi-{version}.tar.bz2 est conseillé.
+La dernière version de FusionInventory doit être [téléchargée](http://plugins.glpi-project.org/#/plugin/fusioninventory). Le dossier glpi-{version}.tar.bz2 est conseillé.
 
 L'archive est à déplacer dans le dossier /var/www/glpi/plugins et à extraire.  
 `sudo tar xfvj fusioninventory-for-glpi-glpi9.2-2.0.tar.bz2`

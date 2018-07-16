@@ -47,7 +47,7 @@ Ensuite, lui ajouter un job associé au module de découverte réseau et lui att
 <caption>*__figure__ : création d'un job pour la tâche de découverte*</caption>
 </p>
 
-Une tâche doit également être créée pour effectuer l'inventaire réseau. Réitérer l'opération de création d'une tâche en précisant "SNMP" pour le nom et en affectant le module "Inventaire réseau(SNMP)" au nouveau job.  
+Une tâche doit également être créée pour effectuer l'inventaire réseau. Réitérer l'opération de création d'une tâche en précisant "SNMP" pour le nom et en affectant le module "Inventaire réseau (SNMP)" au nouveau job.  
 Il est maintenant possible d'exécuter les nouvelles tâches. La crontab modifiée précédemment permet le lancement régulier des tâches mais il est également possible de forcer leur exécution grâce à `sudo fusioninventory-agent`.
 
 La découverte et l'inventaire réseau peuvent prendre plusieurs minutes. Afin d'en suivre l'évolution, il est possible de se rendre dans FusionInventory et dans l'onglet *Réseau > Etat des découvertes* ou bien *Réseau > Statut de l'inventaire réseau*.
@@ -79,7 +79,7 @@ Par exemple, on peut définir le crière de la règle "NetworkEquipment update (
 
 De plus, il est à savoir que les règles sont exécutées dans l'ordre, il faudra les déplacer selon le besoin.
 
-Dans l'onglet *Administration > FusionInventory* et *Règle > Matériel ignoré durant l'import*, il est possible de voir les équipements qui ne sont pas remontés jusqu'à GLPI. Afin de voir les règles qui ont bloqué ce passage, il est nécessaire d'ajouter la colonne "Nom de la règle".
+Dans l'onglet *Administration > FusionInventory* et *Règle > Matériel ignoré durant l'import*, les équipements qui ne sont pas remontés jusqu'à GLPI peuvent être consultés. Afin de voir les règles qui ont bloqué ce passage, il est nécessaire d'ajouter la colonne "Nom de la règle".
 <p align=center>
 ![Règle bloquante](/img/decouverteInventaire/regleBloquante.png "règle bloquante")  
 <caption>*__figure__ : affichage de la règle bloquante*</caption>

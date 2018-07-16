@@ -47,7 +47,7 @@ Il faut maintenant se connecter à la base de données grâce aux identifiants c
 </p>
 
 
-GLPI va maintenant pouvoir se servir de la base de données reliéée à cet utilisateur.  
+GLPI va a présent pouvoir se servir de la base de données reliéée à cet utilisateur.  
 <p align=center>
 ![Sélection de la BdD](/img/installGLPI/selectionBD.png "sélection de la BdD")  
 <caption>*__figure__ : sélection de la base de données*</caption>

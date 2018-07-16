@@ -50,9 +50,9 @@ Afin de vérifier qu'Apache est bien en cours d'exécution, de même que MySQL :
 
 GLPI utilise les bases de données afin de stocker les inventaires et les informations annexes. Il faut pour cela lui créer une base et un utilisateur habilité à s'y connecter.  
 `sudo mysql -u root -p`  
-`mysql > CREATE database glpi;`
+`mysql > CREATE database glpi;`  
 `mysql > GRANT ALL PRIVILEGES ON glpi.* to glpiUser@localhost identified by 'mdpGlpiUser';`  
-`mysql > FLUSH privileges`  
+`mysql > FLUSH privileges;`  
 `mysql > exit;`
 
 Le nom d'utilisateur et le mot de passe seront à renseigner durant l'installation de GLPI.

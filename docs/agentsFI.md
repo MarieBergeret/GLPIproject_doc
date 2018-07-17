@@ -14,14 +14,14 @@ De nombreuses dépendances sont nécessaires au fonctionnement de l'agent :
 Télécharger les paquets sur le lien ci-dessus et les installer comme indiqué.
 
 Afin de configurer l'agent, il faut éditer le fichier agent.cfg :  
-`sudo vim /etc/fusioninventory/agent.cfg`
+`sudo vim /etc/fusioninventory/agent.cfg`.
 
 Les lignes suivantes doivent être modifiées, en précisant l'IP publique de la machine accueillant GLPI :  
 > server = http://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/  
 > httpd-trust = ipPubliqueDeLaMachineServeur
 
 Enfin, redémarrer l'agent :  
-`sudo systemctl restart fusioninventory-agent`
+`sudo systemctl restart fusioninventory-agent`.
 
 ## Déploiement de masse Windows
 

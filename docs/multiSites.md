@@ -24,17 +24,17 @@ Afin de faciliter le processus de certification, le script Certbot peut être ut
 `sudo apt-get update`  
 `sudo apt-get install python-certbot-apache`  
 Il faut également activer le module ssl sur Apache :  
-`sudo a2enmod ssl`  
+`sudo a2enmod ssl`.  
 Enfin, pour lancer la configuration, exécuter :  
-`sudo certbot --apache`  
+`sudo certbot --apache`.  
 
 Le détail est visible sur [cette vidéo](https://www.youtube.com/watch?v=OLOfpU2NUJQ).  
 Le détail de la génération d'un certificat par Let's Encrypt, sans l'utilisation de Certbot, est disponible [ici](https://www.linode.com/docs/security/ssl/install-lets-encrypt-to-create-ssl-certificates/).
 
 Il est cependant à noter que le certificat ne durant que 90 jours, il faudra le mettre à jour. Pour cela, une tâche cron peut être paramétrée.  
-Editer la crontab : `sudo crontab -e`  
+Editer la crontab : `sudo crontab -e`.  
 Et y ajouter la ligne suivante qui va permettre de vérifier si le certificat expire dans moins de 30 jours, tous les lundis à 23h50 et de le renouveler dans ce cas :  
-`50 23 * * 1 /usr/bin/certbot renew >> /var/log/certbot-renew.log`
+`50 23 * * 1 /usr/bin/certbot renew >> /var/log/certbot-renew.log`.
 
 En plus de sécuriser le serveur en HTTPS, les agents doivent être liés à ce certificat. Il faudra notamment spécifier le chemin vers le certificat. La démarche est explicitée [ici](http://fusioninventory.org/documentation/security.html).
 Le fichier de configuration de l'agent, situé dans /etc/fusioninventory/agent.cfg, doit être modifié. Pour cela, changer l'adresse contenue dans "server" par "https://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/" ainsi que le chemin vers le certificat dans la variable "ca-cert-file".

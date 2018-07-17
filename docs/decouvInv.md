@@ -87,7 +87,7 @@ Dans l'onglet *Administration > FusionInventory* et *Règle > Matériel ignoré 
 
 ## Indications sur les imprimantes
 
-A la fin d'une découverte réseau, des imprimantes peuvent être apparues. Il est possible de visualiser les niveaux d'encre en se rendant sur l'imprimante puis dans l'onglet *FusionInventory SNMP*. Les pages imprimées peuvent être également consultables en se rendant dans l'imprimante puis sur l'intitulé "Compteur de pages actuel".
+A la fin d'une découverte réseau, des imprimantes peuvent être apparues. Il est possible de visualiser les niveaux d'encre en se rendant sur l'imprimante puis dans l'onglet *FusionInventory SNMP*. Le nombre de pages imprimées peut être également consultable en se rendant dans l'imprimante puis sur l'intitulé "Compteur de pages actuel".
 
 ## Indications sur les téléphones
 Seuls les téléphones IP seront inventoriés dans l'onglet *Parc > Téléphones*. Les mobiles nécessitent le déploiement d'un agent, comme l'agent [Android](http://fusioninventory.org/documentation/agent/installation/android.html), et seront visibles dans l'onglet *Parc > Ordinateurs*.

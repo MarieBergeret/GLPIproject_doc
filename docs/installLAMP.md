@@ -23,7 +23,7 @@ MySQL peut être installé par la commande suivante :
 GLPI nécessite au minimum la version 5.9 de PHP. Afin de pouvoir utiliser les commandes qui suivent il peut être utile de mettre à jour la version de Linux :
 `sudo apt-get upgrade`.
 
-Ainsi la dernière version de PHP ainsi que les modules nécessaires peuvent être installés :  
+Ainsi la dernière version de PHP et les modules nécessaires peuvent être installés :  
 `sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql php-cgi php-curl php-json`.
 
 !!! note

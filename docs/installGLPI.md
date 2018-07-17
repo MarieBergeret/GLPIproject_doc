@@ -33,7 +33,7 @@ Il faut alors confirmer le nouveau fichier de configuration et relancer Apache.
 
 La suite de l'installation de GLPI s'effectue via son interface web. Il faut pour cela se connecter sur localhost/glpi.
 
-Après avoir accepté les conditions générales d'utilisation et choisi d'installer GLPI, les extensions sont affichées. Dans le cas où certaines ne sont pas validées, installer les paquets nécessaires et redémarrer le serveur Apache.
+Après avoir accepté les conditions générales d'utilisation et choisi d'installer GLPI, les extensions sont affichées. Dans le cas où certaines ne sont pas validées, installer les paquets mentionnés et redémarrer le serveur Apache.
 <p align=center>
 ![Paquets installation GLPI](/img/installGLPI/testPaquets.png "paquets installation GLPI")  
 <caption>*__figure__ : tests sur les paquets nécessaires à l'installation*</caption>

@@ -31,4 +31,3 @@ Une ligne issue d’un fichier sera écrite sous la forme :
 *Marie Bergeret  
 juillet 2018*
 
-

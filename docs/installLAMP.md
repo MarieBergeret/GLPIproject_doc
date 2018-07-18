@@ -26,6 +26,9 @@ GLPI nécessite au minimum la version 5.9 de PHP. Afin de pouvoir utiliser les c
 Ainsi la dernière version de PHP et les modules nécessaires peuvent être installés :  
 `sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql php-cgi php-curl php-json`.
 
+Les extensions suivantes doivent également être installées :  
+`sudo apt-get install php-ldap php-imap php-xmlrpc php-cas php-apcu`.
+
 !!! note
 
 	La version de PHP peut être connue par `php -v`.

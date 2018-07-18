@@ -14,9 +14,9 @@ Il convient d'appliquer les droits suivants sur le dossier GLPI :
 ## Configuration du serveur
 
 Il faut maintenant autoriser l'accès au site GLPI auprès du serveur. Pour cela, se placer dans le dossier /etc/apache2/sites-available et copier :  
-`sudo cp 000-default.conf glpi.conf`  
-puis lancer une modification :  
-`sudo vim glpi.conf`  
+`sudo cp 000-default.conf glpi.conf`.  
+Puis lancer une modification :  
+`sudo vim glpi.conf`.  
 Il faudra modifier la ligne  
 > DocumentRoot /var/www/html  
 

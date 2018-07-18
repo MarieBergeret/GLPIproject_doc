@@ -11,8 +11,9 @@ Pour vérifier sa bonne installation, ouvrir un navigateur web et se rendre sur 
 
 ## Installation de MySQL
 
-MySQL peut être installé par la commande suivante :
+La version de MySQL doit être supérieure ou égale à 5.6. Le SGBD peut être installé par la commande suivante :
 `sudo apt-get install mysql-server`.
+
 
 !!! note
 

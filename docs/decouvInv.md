@@ -19,6 +19,9 @@ Les différents modules permettent de :
 
 Les agents peuvent également être paramétrés dans l'onglet *Administration > FusionInventory* puis *Général > Configuration générale > Modules des agents*.
 
+!!! note
+	Il peut être intéressant d'augmenter le nombre de threads alloués à la découverte et à l'inventaire dans l'onglet *Agent*.
+
 ## Configuration d'une découverte et d'un inventaire
 
 Afin de configurer le lancement d'une découverte réseau et de l'inventaire il faut dans un premier temps définir la plage d'adresses IP qui sera analysée. Pour ce faire, sous FusionInventory, se rendre dans l'onglet *Réseaux > Plage IP* et définir les adresses de début et de fin.

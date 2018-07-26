@@ -56,6 +56,10 @@ La découverte et l'inventaire réseau peuvent prendre plusieurs minutes. Afin d
 <caption>*__figure__ : suivi de l'exécution d'une tâche de découverte*</caption>
 </p>
 
+!!! note
+
+	Si une tâche est bloquée sur "préparée", exécuter la tâche *taskscheduler* qui se trouve dans *Configuration > Actions automatiques* et relancer la tâche.
+
 Les équipements trouvés se situent désormais dans l'inventaire. Pour les visionner, se rendre dans l'onglet *Parc* de GLPI. Les informations récupérées par les agents permettent d'affecter automatiquement les machines dans les bons types et de remplir ses caractéristiques. Si un agent ne récupère pas assez d'informations (au minimum le type) l'équipement sera situé dans l'onglet *Parc > Equipement non-géré*. Il est possible de remplir les informations à la main et de faire un import. Il est à noter que certains éléments peuvent ne pas être connus par FusionInventory. Cependant, les développeurs rajoutent des machines à chaque release afin de combler ces lacunes.
 
 ## Gestion des règles d'import

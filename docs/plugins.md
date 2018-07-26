@@ -21,3 +21,11 @@ Le plugin IPReport, disponible à [cette adresse](http://plugins.glpi-project.or
 ## Network Architecture
 
 La représentation du matériel réseau peut être consultée à l’ajout du plugin Network Architecture disponible [ici](http://plugins.glpi-project.org/#/plugin/archires). Il est possible de visualiser uniquement l’architecture d’un groupe, comme par exemple celle d’un site distant.
+
+## Generic Objects Management
+
+Des catégories spécifiques au secteur d'activité peuvent être ajoutées à l'inventaire de parc afin de détailler le conditionnement des équipements. Le plugin [Generic Objects Management](http://plugins.glpi-project.org/#/plugin/genericobject) permet d'ajouter de nouveaux intitulés. Leurs créations sera ensuite possible sous *Configuration > Gestion d'objets*.
+<p align=center>
+![Type caisse](/img/plugins/typeCaisse.png "type caisse")  
+<caption>*__figure__ : ajout du type Caisses*</caption>
+</p>

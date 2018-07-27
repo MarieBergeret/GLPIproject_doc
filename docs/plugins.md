@@ -29,3 +29,11 @@ Des catégories spécifiques au secteur d'activité peuvent être ajoutées à l
 ![Type caisse](/img/plugins/typeCaisse.png "type caisse")  
 <caption>*__figure__ : ajout du type Caisses*</caption>
 </p>
+
+## Fields
+
+Des informations peuvent être ajoutées aux différentes catégories d'équipement. Pour cela, installer le plugin [Fields](http://plugins.glpi-project.org/#/plugin/field) et ajouter différents champs pouvant être de type texte, date ou encore une liste déroulante etc.
+<p align=center>
+![Types des champs](/img/plugins/typesChamps.png "types des champs")  
+<caption>*__figure__ : types des champs*</caption>
+</p>

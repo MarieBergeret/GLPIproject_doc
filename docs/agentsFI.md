@@ -24,7 +24,7 @@ Les lignes suivantes doivent être modifiées, en précisant l'IP publique de la
 
 	Ne pas oublier d'indiquer HTTPS pour les connexions sécurisées.
 
-Afin d'autoriser les tâches d'inventaire SNMP il conviendra de modifier :  
+Pour d'autoriser les tâches d'inventaire SNMP il conviendra de modifier :  
 > tasks = netdiscovery,netinventory,inventory
 
 Enfin, redémarrer l'agent :  

@@ -30,13 +30,13 @@ Pour autoriser les tâches d'inventaire SNMP il conviendra de modifier :
 Enfin, redémarrer l'agent :  
 `sudo systemctl restart fusioninventory-agent`.
 
-Le statut de l'agent sera ensuite visible sur le poste sur lequel il est installée via l'adresse http://localhost:62354.
+Le statut de l'agent sera ensuite visible sur le poste sur lequel il est installé via l'adresse http://localhost:62354.
 
 ## Déploiement de masse Windows
 
 Les agents peuvent être déployés sur les machines Windows à distance. Pour cela une GPO ordinateur et un script fourni par FusionInventory seront nécessaires. Le script, en vbs, permettant de déployer l'agent 2.4 est disponible [ici](/deploiementWindows/fusioninventory-agent-deployment.vbs).  
 L'option /S rajoutée dans la variable SetupOptions va permettre le déploiement silencieux de l'agent. Il faudra en revanche rajouter l'option /M pour que l'agent soit visible dans le menu Démarrer de Windows.  
 Les options /execmode=service et /add-firewall-exception donnent la possibilité respectivement d'installer l'agent en tant que service Windows et d'ouvrir le port 62354 pour autoriser l'accès au serveur.  
-La variable SetupLocation contient le chemin vers le dossier partagé du serveur Windows accueillant la GPO, sur lequel sont stockés les fichiers exe pour les versions [x64](/deploiementWindows/fusioninventory-agent_windows-x64_2.4.exe) et [x86](/deploiementWindows/fusioninventory-agent_windows-x86_2.4.exe).
+La variable SetupLocation contient le chemin vers le dossier partagé du serveur Windows accueillant la GPO, sur lequel sont stockés les fichiers .exe pour les versions [x64](/deploiementWindows/fusioninventory-agent_windows-x64_2.4.exe) et [x86](/deploiementWindows/fusioninventory-agent_windows-x86_2.4.exe).
 
 Le déploiement de masse par GPO étant spécifique aux machines Windows, il reste  possible d'utiliser un script SSH pour déployer les agents sur les ordinateurs Linux mais également sous Mac.

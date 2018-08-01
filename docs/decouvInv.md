@@ -67,7 +67,7 @@ Les équipements trouvés se situent désormais dans l'inventaire. Pour les visi
 
 !!! note
 
-	Un équipement peut être supprimé des différentes listes, attention cependant à le supprimer de le corbeille sinon il est considéré comme existant et ne pourra être re-découvert.
+	Un équipement peut être supprimé des différentes listes, attention cependant à le supprimer de le corbeille sinon il sera considéré comme existant et ne pourra être re-découvert.
 
 ## Gestion des règles d'import
 

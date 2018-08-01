@@ -103,7 +103,7 @@ SetupArchitecture = "Auto"
 '    You should use simple quotes (') to set between quotation marks those values
 '    that require it; double quotes (") doesn't work with UNCs.
 '
-SetupOptions = "/acceptlicense /runnow /execmode=service /add-firewall-exception /tag=Lourdes /server='http://extranet.n-py.com/glpi/plugins/fusioninventory/' /S"
+SetupOptions = "/acceptlicense /runnow /execmode=service /add-firewall-exception /tag=Lourdes /server='https://extranet.n-py.com/glpi/plugins/fusioninventory/' /S"
 
 ' Setup
 '    The installer file name. You should not have to modify this variable ever.

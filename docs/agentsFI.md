@@ -43,4 +43,13 @@ Les options /execmode=service et /add-firewall-exception donnent la possibilité
 La variable SetupLocation contient le chemin vers le dossier partagé du serveur Windows accueillant la GPO, sur lequel sont stockés les fichiers .exe pour les versions [x64](/deploiementWindows/fusioninventory-agent_windows-x64_2.4.exe) et [x86](/deploiementWindows/fusioninventory-agent_windows-x86_2.4.exe).  
 De plus, les fichiers de configuration de l'agent, [FusionInventory.adml](/deploiementWindows/FusionInventory.adml) et [FusionInventory.admx](/deploiementWindows/FusionInventory.admx), sont à placer dans le sous-dossier PolicyDefinitions de SYSVOL. 
 
+En résumé :  
+>	1. Placer le fichier .vbs dans le dossier *SYSVOL > netLogon/Scripts*.  
+>	2. Placer les fichiers .admx et .adml dans le dossier *SYSVOL > PolicyDefinitions*.  
+>	3. Placer les fichiers .exe dans un dossier de partage.  
+>	4. Dans la GPO, accéder à *Configuration ordinateur > Stratégies > Paramètres Windows > Scripts (démarrage/arrêt)*. Dans *Démarrage*, ajouter le chemin vers le script .vbs.
+>	5. Configurer les agents dans *Configuration ordinateur > Stratégies > Modèles d'administration > Système > Agent fusion*. Y renseigner le serveur et le tag.
+>	6. Lier la GPO à une OU.
+>	7. Redémarrer les postes clients.
+
 Le déploiement de masse par GPO étant spécifique aux machines Windows, il reste  possible d'utiliser un script SSH pour déployer les agents sur les ordinateurs Linux mais également sous Mac.

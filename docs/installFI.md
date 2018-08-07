@@ -26,7 +26,7 @@ Le plugin apparaît maintenant sous l'onglet *Configuration > Plugins*. Il faut 
 
 ## Paramétrage de FusionInventory
 
-GLPI affiche un message indiquant de configurer la crontab afin que les remontées d'informations s'effectuent à intervalle régulier. Pour ce faire, se rendre dans un terminal et ouvrir la crontab :  
+GLPI affiche un message indiquant de configurer la crontab afin que les actions automatiques, telles que le nettoyage des fichiers temporaires ou l'optimisation de la base de données, s'effectuent à intervalle régulier. Pour ce faire, se rendre dans un terminal et ouvrir la crontab :  
 `sudo crontab -u www-data -e`.  
 Puis ajouter la ligne suivante en fin de fichier :  
 > \* \* \* \* \* /usr/bin/php7.0 /var/www/glpi/front/cron.php &\>/dev/null  

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Découverte et inventaire réseau - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "D\u00e9couverte et inventaire r\u00e9seau";
+    var mkdocs_page_input_path = "decouvInv.md";
+    var mkdocs_page_url = "/decouvInv/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Découverte et inventaire réseau</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#decouverte-et-inventaire-reseau">Découverte et inventaire réseau</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#parametrage-des-agents">Paramétrage des agents</a></li>
+        
+            <li><a class="toctree-l3" href="#configuration-dune-decouverte-et-dun-inventaire">Configuration d'une découverte et d'un inventaire</a></li>
+        
+            <li><a class="toctree-l3" href="#gestion-des-regles-dimport">Gestion des règles d'import</a></li>
+        
+            <li><a class="toctree-l3" href="#indications-sur-les-imprimantes">Indications sur les imprimantes</a></li>
+        
+            <li><a class="toctree-l3" href="#indications-sur-les-telephones">Indications sur les téléphones</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Découverte et inventaire réseau</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="decouverte-et-inventaire-reseau">Découverte et inventaire réseau</h1>
+<h2 id="parametrage-des-agents">Paramétrage des agents</h2>
+<p>La découverte et l'inventaire réseau se font grâce aux remontées des agents. Pour cela, il faut spécifier les actions qu'un agent est autorisé à réaliser. Il faut se rendre dans <em>Administration &gt; FusionInventory</em> puis <em>Général &gt; Gestion des agents</em> et sélectionner l'agent concerné. Dans l'onglet <em>Modules des agents</em>, cocher les modules souhaités et mettre à jour.<br />
+Les différents modules permettent de :</p>
+<ul>
+<li>WakeOnLan : réveil des ordinateurs à distance</li>
+<li>Inventaire distant des hôtes VMWare : inventaire des caractéristiques, composants et logiciels d'une machine virtuelle VMWare</li>
+<li>Découverte réseau : scan du réseau à la découverte d'équipements</li>
+<li>Collecte de données : collecte de données de base de registre et de WMI</li>
+<li>Inventaire ordinateur : inventaire des caractéristiques, composants et logiciels d'un ordinateur</li>
+<li>Inventaire réseau (SNMP) : lecture des informations SNMP transitants sur le réseau</li>
+<li>Déploiement du paquet : installation ou mise à jour à distance d'une application
+<p align=center>
+<img alt="Sélection modules agent" src="../img/decouverteInventaire/selectionModule.png" title="selection modules agent" /><br />
+<caption><em><strong>figure</strong> : sélection des modules d'un agent</em></caption>
+</p></li>
+</ul>
+<p>Les agents peuvent également être paramétrés dans l'onglet <em>Administration &gt; FusionInventory</em> puis <em>Général &gt; Configuration générale &gt; Modules des agents</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il peut être intéressant d'augmenter le nombre de threads alloués à la découverte et à l'inventaire dans l'onglet <em>Agent</em>.</p>
+</div>
+<h2 id="configuration-dune-decouverte-et-dun-inventaire">Configuration d'une découverte et d'un inventaire</h2>
+<p>Afin de configurer le lancement d'une découverte réseau et de l'inventaire il faut dans un premier temps définir la plage d'adresses IP qui sera analysée. Pour ce faire, sous FusionInventory, se rendre dans l'onglet <em>Réseaux &gt; Plage IP</em> et définir les adresses de début et de fin.
+<p align=center>
+<img alt="Définition plage IP" src="../img/decouverteInventaire/plageIP.png" title="définition de la plage IP" /><br />
+<caption><em><strong>figure</strong> : définition d'une plage IP</em></caption>
+</p></p>
+<p>Des authentifications SNMP doivent être liées à la plage IP afin de couvrir un maximum de matériel. Toujours sous <em>Réseaux &gt; Plage IP</em>, ajouter les versions 1 puis 2c de SNMP.</p>
+<p>L'exécution d'un agent se présente sous forme de tâches. Afin de les créer, il faut se rendre dans FusionInventory et <em>Tâches &gt; Gestion des tâches</em>. Pour en ajouter une, cliquer sur "+".
+<p align=center>
+<img alt="Ajout tâche" src="../img/decouverteInventaire/ajoutTache.png" title="ajout tâche" /><br />
+<caption><em><strong>figure</strong> : bouton d'ajout d'une tâche</em></caption>
+</p> </p>
+<p>Créer une tâche de découverte réseau et l'activer.
+<p align=center>
+<img alt="Tâche découverte réseau" src="../img/decouverteInventaire/tacheDecouverte.png" title="tâche découverte réseau" /><br />
+<caption><em><strong>figure</strong> : création d'une tâche de découverte réseau</em></caption>
+</p></p>
+<p>Ensuite, lui ajouter un job associé au module de découverte réseau et lui attribuer l'agent du serveur et la plage d'adresses IP.
+<p align=center>
+<img alt="Job découverte réseau" src="../img/decouverteInventaire/jobDecouverte.png" title="job découverte réseau" /><br />
+<caption><em><strong>figure</strong> : création d'un job pour la tâche de découverte</em></caption>
+</p></p>
+<p>Une tâche doit également être créée pour effectuer l'inventaire réseau. Réitérer l'opération de création d'une tâche en précisant "SNMP" pour le nom et en affectant le module "Inventaire réseau (SNMP)" au nouveau job.<br />
+Il est maintenant possible d'exécuter les nouvelles tâches. La crontab modifiée précédemment permet le lancement régulier des tâches mais il est également possible de forcer leur exécution grâce à <code>sudo fusioninventory-agent</code>.</p>
+<p>La découverte et l'inventaire réseau peuvent prendre plusieurs minutes. Afin d'en suivre l'évolution, il est possible de se rendre dans FusionInventory et dans l'onglet <em>Réseau &gt; Etat des découvertes</em> ou bien <em>Réseau &gt; Statut de l'inventaire réseau</em>.
+<p align=center>
+<img alt="Exécution tâche" src="../img/decouverteInventaire/executionTache.png" title="exécution tâche" /><br />
+<caption><em><strong>figure</strong> : suivi de l'exécution d'une tâche de découverte</em></caption>
+</p></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si une tâche est bloquée sur "préparé", exécuter la tâche <em>taskscheduler</em> qui se trouve dans <em>Configuration &gt; Actions automatiques</em> et relancer la tâche.</p>
+</div>
+<p>Les équipements trouvés se situent désormais dans l'inventaire. Pour les visionner, se rendre dans l'onglet <em>Parc</em> de GLPI. Les informations récupérées par les agents permettent d'affecter automatiquement les machines dans les bons types et de remplir ses caractéristiques. Si un agent ne récupère pas assez d'informations (au minimum le type) l'équipement sera situé dans l'onglet <em>Parc &gt; Equipement non-géré</em>. Il est possible de remplir les informations à la main et de faire un import. Il est à noter que certains éléments peuvent ne pas être connus par FusionInventory. Cependant, les développeurs rajoutent des machines à chaque release afin de combler ces lacunes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Un équipement peut être supprimé des différentes listes, attention cependant à le supprimer de le corbeille sinon il sera considéré comme existant et ne pourra être re-découvert.</p>
+</div>
+<h2 id="gestion-des-regles-dimport">Gestion des règles d'import</h2>
+<p>Afin de générer un inventaire cohérent, des règles d'import doivent être appliquées. Celles-ci sont modifiables sous l'onglet <em>Administration &gt; FusionInventory</em> et <em>Règles &gt; Règles d'import et de liaison des matériels</em>. Il est possible d'activer/désactiver les différentes règles.
+<p align=center>
+<img alt="Activation règle" src="../img/decouverteInventaire/activationRegle.png" title="activation règle" /><br />
+<caption><em><strong>figure</strong> : activation de règles</em></caption>
+</p></p>
+<p>Pour créer une nouvelle règle, cliquer sur le bouton "+" de cette même page. Après lui avoir ajouté un nom, il est possible de définir les critères de prise en compte de cette règle et les actions à réaliser.<br />
+Par exemple, on peut définir le crière de la règle "NetworkEquipment update (by ip)" comme étant l'existence dans GLPI de l'adresse IP d'un équipement réseau trouvé et comme action de choisir de ne pas réimporter l'équipement avec cette adresse IP mais de le mettre à jour.
+<p align=center>
+<img alt="Critères règle IP" src="../img/decouverteInventaire/critereRegle.png" title="critères règle IP" /><br />
+<caption><em><strong>figure</strong> : critères appliqués à la règle "NetworkEquipment update (by ip)"</em></caption>
+</p>
+<p align=center>
+<img alt="Action règle IP" src="../img/decouverteInventaire/actionRegle.png" title="action règle IP" /><br />
+<caption><em><strong>figure</strong> : action réalisée par la règle "NetworkEquipment update (by ip)"</em></caption>
+</p></p>
+<p>De plus, il est à savoir que les règles sont exécutées dans l'ordre, il faudra les déplacer selon le besoin.</p>
+<p>Dans l'onglet <em>Administration &gt; FusionInventory</em> et <em>Règle &gt; Matériel ignoré durant l'import</em>, les équipements qui ne sont pas remontés jusqu'à GLPI peuvent être consultés. Afin de voir les règles qui ont bloqué ce passage, il est nécessaire d'ajouter la colonne "Nom de la règle".
+<p align=center>
+<img alt="Règle bloquante" src="../img/decouverteInventaire/regleBloquante.png" title="règle bloquante" /><br />
+<caption><em><strong>figure</strong> : affichage de la règle bloquante</em></caption>
+</p></p>
+<h2 id="indications-sur-les-imprimantes">Indications sur les imprimantes</h2>
+<p>A la fin d'une découverte réseau, des imprimantes peuvent être apparues. Il est possible de visualiser les niveaux d'encre en se rendant sur l'imprimante puis dans l'onglet <em>FusionInventory SNMP</em>. Le nombre de pages imprimées peut être également consultable en se rendant dans l'imprimante puis sur l'intitulé "Compteur de pages actuel".</p>
+<h2 id="indications-sur-les-telephones">Indications sur les téléphones</h2>
+<p>Seuls les téléphones IP seront inventoriés dans l'onglet <em>Parc &gt; Téléphones</em>. Les mobiles nécessitent le déploiement d'un agent, comme l'agent <a href="http://fusioninventory.org/documentation/agent/installation/android.html">Android</a>, et seront visibles dans l'onglet <em>Parc &gt; Ordinateurs</em>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../multiSites/" class="btn btn-neutral float-right" title="Gestion du multi-sites">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../agentsFI/" class="btn btn-neutral" title="Déploiement des agents"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../agentsFI/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../multiSites/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

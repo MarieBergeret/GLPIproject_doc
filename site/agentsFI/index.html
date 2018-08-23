@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Déploiement des agents - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "D\u00e9ploiement des agents";
+    var mkdocs_page_input_path = "agentsFI.md";
+    var mkdocs_page_url = "/agentsFI/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Déploiement des agents</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#deploiement-des-agents-fusioninventory">Déploiement des agents FusionInventory</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#deploiement-de-masse-windows">Déploiement de masse Windows</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Déploiement des agents</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="deploiement-des-agents-fusioninventory">Déploiement des agents FusionInventory</h1>
+<p>Les agents permettent de récupérer les informations d'un ordinateur grâce au protocole SNMP. Dans un premier temps, un agent doit être installé sur le serveur Linux. La procédure d'installation est disponible pour les différents OS sur le site de FusionInventory. Ici, <a href="http://fusioninventory.org/documentation/agent/installation/linux/deb.html">celle-ci</a> est utilisée.</p>
+<p>De nombreuses dépendances sont nécessaires au fonctionnement de l'agent :<br />
+<code>sudo apt -y install dmidecode hwdata ucf hdparm</code><br />
+<code>sudo apt -y install perl libuniversal-require-perl libwww-perl libparse-edid-perl</code><br />
+<code>sudo apt -y install libproc-daemon-perl libfile-which-perl</code><br />
+<code>sudo apt -y install libxml-treepp-perl libyaml-perl libnet-cups-perl libnet-ip-perl</code><br />
+<code>sudo apt -y install libdigest-sha-perl libsocket-getaddrinfo-perl libtext-template-perl</code><br />
+<code>sudo apt -y install nmap libnet-snmp-perl libcrypt-des-perl libnet-nbname-perl</code><br />
+<code>sudo apt -y install libfile-copy-recursive-perl libparallel-forkmanager-perl</code></p>
+<p>Télécharger les paquets sur le lien ci-dessus et les installer comme indiqué.</p>
+<p>Afin de configurer l'agent, il faut éditer le fichier agent.cfg :<br />
+<code>sudo vim /etc/fusioninventory/agent.cfg</code>.</p>
+<p>Les lignes suivantes doivent être modifiées, en précisant l'IP publique de la machine accueillant GLPI :  </p>
+<blockquote>
+<p>server = http://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/<br />
+httpd-trust = ipPubliqueDeLaMachineServeur</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ne pas oublier d'indiquer HTTPS pour les connexions sécurisées.</p>
+</div>
+<p>Pour autoriser les tâches d'inventaire SNMP il conviendra de modifier :  </p>
+<blockquote>
+<p>tasks = netdiscovery,netinventory,inventory</p>
+</blockquote>
+<p>Le champs "tag" peut être complété afin de faciliter le tri des équipements lors de la découverte. Il est par exemple possible de mentionner le nom d'un site physique tel que :  </p>
+<blockquote>
+<p>tag = cauterets  </p>
+</blockquote>
+<p>Enfin, redémarrer l'agent :<br />
+<code>sudo systemctl restart fusioninventory-agent</code>.</p>
+<p>Le statut de l'agent sera ensuite visible sur le poste sur lequel il est installé via l'adresse http://localhost:62354.</p>
+<h2 id="deploiement-de-masse-windows">Déploiement de masse Windows</h2>
+<p>Les agents peuvent être déployés sur les machines Windows à distance. Pour cela une GPO ordinateur et un script fourni par FusionInventory sont nécessaires. Le script, en vbs, permettant de déployer l'agent 2.4 est disponible <a href="../deploiementWindows/fusioninventory-agent-deployment.vbs">ici</a>.<br />
+L'option /S rajoutée dans la variable SetupOptions va permettre le déploiement silencieux de l'agent. Il faudra en revanche rajouter l'option /M pour que l'agent soit visible dans le menu Démarrer de Windows.<br />
+Les options /execmode=service et /add-firewall-exception donnent la possibilité respectivement d'installer l'agent en tant que service Windows et d'ouvrir le port 62354 pour autoriser l'accès au serveur.<br />
+La variable SetupLocation contient le chemin vers le dossier partagé du serveur Windows accueillant la GPO, sur lequel sont stockés les fichiers .exe pour les versions <a href="../deploiementWindows/fusioninventory-agent_windows-x64_2.4.exe">x64</a> et <a href="../deploiementWindows/fusioninventory-agent_windows-x86_2.4.exe">x86</a>.<br />
+De plus, les fichiers de configuration de l'agent, <a href="../deploiementWindows/FusionInventory.adml">FusionInventory.adml</a> et <a href="../deploiementWindows/FusionInventory.admx">FusionInventory.admx</a>, sont à placer dans le sous-dossier PolicyDefinitions de SYSVOL. </p>
+<p>En résumé :  </p>
+<blockquote>
+<ol>
+<li>Placer le fichier .vbs dans le dossier <em>SYSVOL &gt; netLogon/Scripts</em>.  </li>
+<li>Placer les fichiers .admx et .adml dans le dossier <em>SYSVOL &gt; PolicyDefinitions</em>.  </li>
+<li>Placer les fichiers .exe dans un dossier de partage.  </li>
+<li>Dans la GPO, accéder à <em>Configuration ordinateur &gt; Stratégies &gt; Paramètres Windows &gt; Scripts (démarrage/arrêt)</em>. Dans <em>Démarrage</em>, ajouter le chemin vers le script .vbs.</li>
+<li>Configurer les agents dans <em>Configuration ordinateur &gt; Stratégies &gt; Modèles d'administration &gt; Système &gt; Agent fusion</em>. Y renseigner le serveur et le tag.</li>
+<li>Lier la GPO à une OU.</li>
+<li>Redémarrer les postes clients.</li>
+</ol>
+</blockquote>
+<p>Le déploiement de masse par GPO étant spécifique aux machines Windows, il reste  possible d'utiliser un script SSH pour déployer les agents sur les ordinateurs Linux mais également sous Mac.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../decouvInv/" class="btn btn-neutral float-right" title="Découverte et inventaire réseau">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installFI/" class="btn btn-neutral" title="Installation de FusionInventory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../installFI/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../decouvInv/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

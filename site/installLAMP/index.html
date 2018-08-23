@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation de LAMP - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation de LAMP";
+    var mkdocs_page_input_path = "installLAMP.md";
+    var mkdocs_page_url = "/installLAMP/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Installation de LAMP</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#installation-de-linux-apache-mysql-php">Installation de Linux-Apache-MySQL-PHP</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#installation-dapache">Installation d'Apache</a></li>
+        
+            <li><a class="toctree-l3" href="#installation-de-mysql">Installation de MySQL</a></li>
+        
+            <li><a class="toctree-l3" href="#installation-de-php">Installation de PHP</a></li>
+        
+            <li><a class="toctree-l3" href="#gestion-du-serveur-web">Gestion du serveur web</a></li>
+        
+            <li><a class="toctree-l3" href="#parametrage-de-la-base-de-donnees">Paramétrage de la base de données</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Installation de LAMP</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation-de-linux-apache-mysql-php">Installation de Linux-Apache-MySQL-PHP</h1>
+<p>GLPI fonctionnant depuis une interface web, il est nécessaire de lui procurer un environnement LAMP (Linux-Apache-MySQL-PHP). Il est à noter que GLPI supporte également la base de données MariaDB mais l'installation concerne ici MySQL.</p>
+<h2 id="installation-dapache">Installation d'Apache</h2>
+<p>Il faut commencer par installer Apache avec :
+<code>sudo apt-get install apache2</code>.</p>
+<p>Pour vérifier sa bonne installation, ouvrir un navigateur web et se rendre sur localhost. La page d'accueil d'Apache doit s'afficher.</p>
+<h2 id="installation-de-mysql">Installation de MySQL</h2>
+<p>La version de MySQL doit être supérieure ou égale à 5.6. Le SGBD peut être installé par la commande suivante :
+<code>sudo apt-get install mysql-server</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La version de MySQL peut être connue par <code>mysql -V</code>.</p>
+</div>
+<h2 id="installation-de-php">Installation de PHP</h2>
+<p>GLPI nécessite au minimum la version 5.9 de PHP. Afin de pouvoir utiliser les commandes qui suivent il peut être utile de mettre à jour la version de Linux :
+<code>sudo apt-get upgrade</code>.</p>
+<p>Ainsi la dernière version de PHP et les modules nécessaires peuvent être installés :<br />
+<code>sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql php-cgi php-curl php-json</code>.</p>
+<p>Les extensions suivantes doivent également être installées :<br />
+<code>sudo apt-get install php-ldap php-imap php-xmlrpc php-cas php-apcu</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La version de PHP peut être connue par <code>php -v</code>.</p>
+</div>
+<h2 id="gestion-du-serveur-web">Gestion du serveur web</h2>
+<p>Les lancements automatiques du serveur Apache et de la base de données peuvent s'effectuer grâce aux commandes :<br />
+<code>sudo systemctl enable apache2</code><br />
+<code>sudo systemctl enable mysql</code>.</p>
+<p>Si le lancement automatique n'est pas souhaité il conviendra de changer le mot clé <code>enable</code> par <code>disable</code>.</p>
+<p>Il pourra de plus être utile de relancer le serveur et la base de données lors de debug avec les commandes :<br />
+<code>sudo systemctl restart apache2</code><br />
+<code>sudo systemctl restart mysql</code>.</p>
+<p>Afin de vérifier qu'Apache est bien en cours d'exécution, de même que MySQL :<br />
+<code>sudo systemctl status apache2</code><br />
+<code>sudo systemctl status mysql</code>.</p>
+<h2 id="parametrage-de-la-base-de-donnees">Paramétrage de la base de données</h2>
+<p>GLPI utilise les bases de données afin de stocker les inventaires et les informations annexes. Il faut pour cela lui créer une base et un utilisateur habilité à s'y connecter.<br />
+<code>sudo mysql -u root -p</code><br />
+<code>mysql &gt; CREATE database glpi;</code><br />
+<code>mysql &gt; GRANT ALL PRIVILEGES ON glpi.* to glpiUser@localhost identified by mdpGlpiUser;</code><br />
+<code>mysql &gt; FLUSH privileges;</code><br />
+<code>mysql &gt; exit;</code></p>
+<p>Le nom d'utilisateur et le mot de passe seront à renseigner durant l'installation de GLPI.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installGLPI/" class="btn btn-neutral float-right" title="Installation de GLPI">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Accueil"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../installGLPI/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

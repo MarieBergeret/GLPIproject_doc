@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation de FusionInventory - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation de FusionInventory";
+    var mkdocs_page_input_path = "installFI.md";
+    var mkdocs_page_url = "/installFI/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Installation de FusionInventory</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#installation-de-fusioninventory">Installation de FusionInventory</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#recuperation-de-larchive">Récupération de l'archive</a></li>
+        
+            <li><a class="toctree-l3" href="#activation-de-fusioninventory">Activation de FusionInventory</a></li>
+        
+            <li><a class="toctree-l3" href="#parametrage-de-fusioninventory">Paramétrage de FusionInventory</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Installation de FusionInventory</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation-de-fusioninventory">Installation de FusionInventory</h1>
+<p>FusionInventory est un plugin de GLPI permettant l'inventaire du matériel, la découverte réseau et le déploiement d'applications. Les plugins peuvent être consultables sous l'onglet <em>Configuration &gt; Plugins</em> ou directement sur le <a href="http://plugins.glpi-project.org/#/">site</a>.</p>
+<h2 id="recuperation-de-larchive">Récupération de l'archive</h2>
+<p>La dernière version de FusionInventory doit être <a href="http://plugins.glpi-project.org/#/plugin/fusioninventory">téléchargée</a>. Le dossier glpi-{version}.tar.bz2 est conseillé.</p>
+<p>L'archive est à déplacer dans le dossier /var/www/glpi/plugins et à extraire.<br />
+<code>sudo tar xfvj fusioninventory-for-glpi-glpi9.2-2.0.tar.bz2</code></p>
+<p>Le dossier compressé peut être supprimé.<br />
+<code>sudo rm fusioninventory-for-glpi-glpi9.2-2.0.tar.bz2</code></p>
+<h2 id="activation-de-fusioninventory">Activation de FusionInventory</h2>
+<p>Le plugin apparaît maintenant sous l'onglet <em>Configuration &gt; Plugins</em>. Il faut désormais l'installer et l'activer.
+<p align="center">
+<img alt="Installation FI" src="../img/installFI/installationFI.png" title="installation FI" />
+<caption><em><strong>figure</strong> : installation du plugin FusionInventory</em></caption>
+</p>
+<p align=center>
+<img alt="Activation FI" src="../img/installFI/activationFI.png" title="activation FI" />
+<caption><em><strong>figure</strong> : activation du plugin FusionInventory</em></caption>
+</p></p>
+<h2 id="parametrage-de-fusioninventory">Paramétrage de FusionInventory</h2>
+<p>GLPI affiche un message indiquant de configurer la crontab afin que les actions automatiques, telles que le nettoyage des fichiers temporaires ou l'optimisation de la base de données, s'effectuent à intervalle régulier. Pour ce faire, se rendre dans un terminal et ouvrir la crontab :<br />
+<code>sudo crontab -u www-data -e</code>.<br />
+Puis ajouter la ligne suivante en fin de fichier :  </p>
+<blockquote>
+<p>* * * * * /usr/bin/php7.0 /var/www/glpi/front/cron.php &amp;>/dev/null  </p>
+</blockquote>
+<p>Dans le cas où le terminal renvoie une réponse concernant une erreur de timezone, ouvrir le fichier php.ini, situé sous /etc/php/apache2, et modifier la valeur de la timezone :  </p>
+<blockquote>
+<p>date.timezone=Europe/Paris</p>
+</blockquote>
+<p>A présent, FusionInventory est disponible sous l'onglet <em>Administration &gt; FusionInventory</em>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../agentsFI/" class="btn btn-neutral float-right" title="Déploiement des agents">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installGLPI/" class="btn btn-neutral" title="Installation de GLPI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../installGLPI/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../agentsFI/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

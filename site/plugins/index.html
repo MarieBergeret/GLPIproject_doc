@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Plugins supplémentaires - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Plugins suppl\u00e9mentaires";
+    var mkdocs_page_input_path = "plugins.md";
+    var mkdocs_page_url = "/plugins/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Plugins supplémentaires</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#plugins-supplementaires">Plugins supplémentaires</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#more-reporting">More Reporting</a></li>
+        
+            <li><a class="toctree-l3" href="#ip-report">IP Report</a></li>
+        
+            <li><a class="toctree-l3" href="#network-architecture">Network Architecture</a></li>
+        
+            <li><a class="toctree-l3" href="#generic-objects-management">Generic Objects Management</a></li>
+        
+            <li><a class="toctree-l3" href="#fields">Fields</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Plugins supplémentaires</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="plugins-supplementaires">Plugins supplémentaires</h1>
+<p>Afin de faire de la supervision, c’est à dire la visualisation graphique des éléments de l’inventaire ou encore la gestion des rapports de bugs, il peut être utile de rajouter des plugins à GLPI. Il est à noter que les plugins sont liés aux versions de GLPI. Il est important de faire attention aux dates de release des plugins.</p>
+<h2 id="more-reporting">More Reporting</h2>
+<p>Le plugin More reporting, téléchargeable à <a href="http://plugins.glpi-project.org/#/plugin/mreporting">cette adresse</a>, permet la visualisation de graphiques résumant, par exemple, les ordinateurs par OS ou les versions des agents utilisés. Après activation, il sera disponible dans l’onglet <em>Outils &gt; Plus de rapports</em>.
+<p align=center>
+<img alt="More Reporting" src="../img/plugins/moreReporting.png" title="more reporting" /><br />
+<caption><em><strong>figure</strong> : exemple des graphiques concernant l'OS</em></caption>
+</p></p>
+<h2 id="ip-report">IP Report</h2>
+<p>Le plugin IPReport, disponible à <a href="http://plugins.glpi-project.org/#/plugin/addressing">cette adresse</a>, permet quant à lui de visualiser les adresses IP libres, les IP attribuées ainsi que les éventuels doublons. Il est disponible sous l’onglet <em>Outils &gt; Adressage IP</em>.
+<p align=center>
+<img alt="IP Report" src="../img/plugins/IPReport.png" title="IP report" /><br />
+<caption><em><strong>figure</strong> : visualisation d'une IP en double, occupée et libre</em></caption>
+</p></p>
+<h2 id="network-architecture">Network Architecture</h2>
+<p>La représentation du matériel réseau peut être consultée à l’ajout du plugin Network Architecture disponible <a href="http://plugins.glpi-project.org/#/plugin/archires">ici</a>. Il est possible de visualiser uniquement l’architecture d’un groupe, comme par exemple celle d’un site distant.</p>
+<h2 id="generic-objects-management">Generic Objects Management</h2>
+<p>Des catégories spécifiques au secteur d'activité peuvent être ajoutées à l'inventaire de parc afin de détailler le conditionnement des équipements. Le plugin <a href="http://plugins.glpi-project.org/#/plugin/genericobject">Generic Objects Management</a> permet d'ajouter de nouveaux intitulés. Leurs créations sera ensuite possible sous <em>Configuration &gt; Gestion d'objets</em>.
+<p align=center>
+<img alt="Type caisse" src="../img/plugins/typeCaisse.png" title="type caisse" /><br />
+<caption><em><strong>figure</strong> : ajout du type Caisses</em></caption>
+</p></p>
+<h2 id="fields">Fields</h2>
+<p>Des informations peuvent être ajoutées aux différentes catégories d'équipement. Pour cela, installer le plugin <a href="http://plugins.glpi-project.org/#/plugin/field">Fields</a> et ajouter différents champs pouvant être de type texte, date ou encore une liste déroulante etc.
+<p align=center>
+<img alt="Types des champs" src="../img/plugins/typesChamps.png" title="types des champs" /><br />
+<caption><em><strong>figure</strong> : types des champs</em></caption>
+</p></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../maj/" class="btn btn-neutral" title="Mises à jour"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../maj/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

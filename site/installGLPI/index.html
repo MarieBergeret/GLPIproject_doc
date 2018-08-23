@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation de GLPI - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation de GLPI";
+    var mkdocs_page_input_path = "installGLPI.md";
+    var mkdocs_page_url = "/installGLPI/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Installation de GLPI</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#installation-de-glpi">Installation de GLPI</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#recuperation-de-larchive">Récupération de l'archive</a></li>
+        
+            <li><a class="toctree-l3" href="#configuration-du-serveur">Configuration du serveur</a></li>
+        
+            <li><a class="toctree-l3" href="#configuration-via-linterface-web">Configuration via l'interface web</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Installation de GLPI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation-de-glpi">Installation de GLPI</h1>
+<h2 id="recuperation-de-larchive">Récupération de l'archive</h2>
+<p>La dernière version de GLPI est disponible sur le <a href="https://github.com/glpi-project/glpi/releases">Github</a>. Il est préférable de récupérer l'archive glpi-{version}.tar.bz2. Celle-ci est à déplacer dans le dossier du serveur Apache, à savoir /var/www/, et à extraire.<br />
+<code>sudo tar xfvj glpi-9.2.4.tar.bz2</code></p>
+<p>Le dossier compressé peut être supprimé.<br />
+<code>sudo rm glpi-9.2.4.tar.bz2</code>   </p>
+<p>Il convient d'appliquer les droits suivants sur le dossier GLPI :<br />
+<code>sudo chown -R www-data:www-data /var/www/glpi</code>.</p>
+<h2 id="configuration-du-serveur">Configuration du serveur</h2>
+<p>Il faut maintenant autoriser l'accès au site GLPI auprès du serveur. Pour cela, se placer dans le dossier /etc/apache2/sites-available et copier :<br />
+<code>sudo cp 000-default.conf glpi.conf</code>.<br />
+Puis lancer une modification :<br />
+<code>sudo vim glpi.conf</code>.<br />
+Il faudra modifier la ligne  </p>
+<blockquote>
+<p>DocumentRoot /var/www/html  </p>
+</blockquote>
+<p>par  </p>
+<blockquote>
+<p>DocumentRoot /var/www</p>
+</blockquote>
+<p>Il faut alors confirmer le nouveau fichier de configuration et relancer Apache.<br />
+<code>sudo a2dissite 000-default.conf</code><br />
+<code>sudo a2ensite glpi.conf</code><br />
+<code>sudo systemctl reload apache2</code></p>
+<h2 id="configuration-via-linterface-web">Configuration via l'interface web</h2>
+<p>La suite de l'installation de GLPI s'effectue via son interface web. Il faut pour cela se connecter sur localhost/glpi.</p>
+<p>Après avoir accepté les conditions générales d'utilisation et choisi d'installer GLPI, les extensions sont affichées. Dans le cas où certaines ne sont pas validées, installer les paquets mentionnés et redémarrer le serveur Apache.
+<p align=center>
+<img alt="Paquets installation GLPI" src="../img/installGLPI/testPaquets.png" title="paquets installation GLPI" /><br />
+<caption><em><strong>figure</strong> : tests sur les paquets nécessaires à l'installation</em></caption>
+</p>  </p>
+<p>Il faut maintenant se connecter à la base de données grâce aux identifiants créés précédemment.
+<p align=center>
+<img alt="Connexion à la BdD" src="../img/installGLPI/connexionBD.png" title="connexion à la BdD" /><br />
+<caption><em><strong>figure</strong> : paramètres de connexion à la base de données</em></caption>
+</p></p>
+<p>GLPI va a présent pouvoir se servir de la base de données reliéée à cet utilisateur.<br />
+<p align=center>
+<img alt="Sélection de la BdD" src="../img/installGLPI/selectionBD.png" title="sélection de la BdD" /><br />
+<caption><em><strong>figure</strong> : sélection de la base de données</em></caption>
+</p></p>
+<p>Finir l'installation et, enfin, se connecter à GLPI sous le compte administrateur glpi/glpi.
+<p align=center>
+<img alt="Connexion à GLPI" src="../img/installGLPI/connexionGLPI.png" title="connexion à GLPI" /><br />
+<caption><em><strong>figure</strong> : connexion à GLPI</em></caption>
+</p></p>
+<p>Pour des raisons de sécurité, il est préférable de supprimer le fichier install.php.<br />
+<code>sudo rm -R /var/www/glpi/install/install.php</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installFI/" class="btn btn-neutral float-right" title="Installation de FusionInventory">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installLAMP/" class="btn btn-neutral" title="Installation de LAMP"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../installLAMP/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../installFI/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

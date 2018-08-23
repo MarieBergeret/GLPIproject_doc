@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Gestion du multi-sites - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gestion du multi-sites";
+    var mkdocs_page_input_path = "multiSites.md";
+    var mkdocs_page_url = "/multiSites/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Gestion du multi-sites</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#gestion-du-multi-sites">Gestion du multi-sites</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#ajout-des-plages-ip">Ajout des plages IP</a></li>
+        
+            <li><a class="toctree-l3" href="#securisation-dapache">Sécurisation d'Apache</a></li>
+        
+            <li><a class="toctree-l3" href="#configuration-des-entites">Configuration des entités</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../maj/">Mises à jour</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Gestion du multi-sites</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="gestion-du-multi-sites">Gestion du multi-sites</h1>
+<p>La gestion multi-sites permet de répertorier sur une seule application GLPI toutes les machines de sites distants. L'application n'a pas besoin d'être installée sur plusieurs serveurs.</p>
+<h2 id="ajout-des-plages-ip">Ajout des plages IP</h2>
+<p>En vue de faire l'inventaire de sites distants, il est essentiel de connaître les plages IP des différents sites et de créer les plages IP associées. Puis, dans les tâches créées précédement, il est nécessaire d'ajouter ces nouvelles cibles dans les jobs.
+<p align=center>
+<img alt="Ajout cible" src="../img/multiSites/ajoutCible.png" title="ajout cible" /><br />
+<caption><em><strong>figure</strong> : ajout d'une cible supplémentaire dans les jobs</em></caption>
+</p></p>
+<h2 id="securisation-dapache">Sécurisation d'Apache</h2>
+<p>De plus, le pare-feu du site doit être ouvert aux agents sur le port 62354 et sur le port web 80 ou 443. Pour sécuriser la transmission des informations, il est conseillé de paramétrer Apache pour passer par le port HTTPS 443, comme expliqué ci-après. Le port des agents est modifiable sous l'onglet <em>Administration &gt; FusionInventory</em> et <em>Général &gt; Configuration générale</em>.</p>
+<p>La prise en compte de sites distants nécessite la sécurisation des données transitants entre GLPI et les agents déployés. Une modification de la configuration Apache doit être effectuée afin d'autoriser l'accès à GLPI en HTTPS. Pour cela, il convient de créer un certificat SSL. Les autorités ayant la possibilité de délivrer ces certificats ne les fournissent pas gratuitement, à l'exception de certains tel que Let's Encrypt. Il est tout de même possible de paramétrer un certificat auto-signé avec openssl.</p>
+<p>Afin de faciliter le processus de certification, le script Certbot peut être utile. Il faut tout d'abord installer les paquets nécessaires puis lancer le script, qui affichera les domaines pour lesquels générer un certificat SSL.<br />
+<code>sudo apt-get update</code><br />
+<code>sudo apt-get install software-properties-common</code><br />
+<code>sudo add-apt-repository ppa:certbot/certbot</code><br />
+<code>sudo apt-get update</code><br />
+<code>sudo apt-get install python-certbot-apache</code><br />
+Il faut également activer le module ssl sur Apache :<br />
+<code>sudo a2enmod ssl</code>.<br />
+Enfin, pour lancer la configuration, exécuter :<br />
+<code>sudo certbot --apache</code>.  </p>
+<p>Le détail est visible sur <a href="https://www.youtube.com/watch?v=OLOfpU2NUJQ">cette vidéo</a>.<br />
+Le détail de la génération d'un certificat par Let's Encrypt, sans l'utilisation de Certbot, est disponible <a href="https://www.linode.com/docs/security/ssl/install-lets-encrypt-to-create-ssl-certificates/">ici</a>.</p>
+<p>Il est cependant à noter que le certificat ne durant que 90 jours, il faudra le mettre à jour. Pour cela, une tâche cron peut être paramétrée.<br />
+Editer la crontab : <code>sudo crontab -e</code>.<br />
+Et y ajouter la ligne suivante qui va permettre de vérifier si le certificat expire dans moins de 30 jours, tous les lundis à 23h50 et de le renouveler dans ce cas :<br />
+<code>50 23 * * 1 /usr/bin/certbot renew &gt;&gt; /var/log/certbot-renew.log</code>.</p>
+<p>En plus de sécuriser le serveur en HTTPS, les agents doivent être liés à ce certificat. Il faudra notamment spécifier le chemin vers le certificat. La démarche est explicitée <a href="http://fusioninventory.org/documentation/security.html">ici</a>.
+Le fichier de configuration de l'agent, situé dans /etc/fusioninventory/agent.cfg, doit être modifié. Pour cela, changer l'adresse contenue dans "server" par "https://ipPubliqueDeLaMachineServeur/glpi/plugins/fusioninventory/" ainsi que le chemin vers le certificat dans la variable "ca-cert-file".</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour un certificat auto-signé, il sera nécessaire de passer la valeur "no-ssl-check" à 1.</p>
+</div>
+<h2 id="configuration-des-entites">Configuration des entités</h2>
+<p>Afin d'organiser les machines dans les différents sites il est possible de créer des entités auxquelles les rattacher. Celles-ci peuvent être ajoutées sous l'onglet <em>Administration &gt; Entités</em>.
+<p align=center>
+<img alt="Entités mère-filles" src="../img/multiSites/entites.png" title="entités mère-fille" /><br />
+<caption><em><strong>figure</strong> : entités mère et filles</em></caption>
+</p></p>
+<p>Une règle doit être créée dans <em>Administration &gt; FusionInventory</em> et <em>Règles &gt; Règles sur l'entité "ordinateur"</em>. Le critère principal sera relié à la plage IP du site et l'action permettra de placer l'équipement dans la bonne entité.
+<p align=center>
+<img alt="Critère IP-entité" src="../img/multiSites/critereEntite.png" title="critère IP-entité" /><br />
+<caption><em><strong>figure</strong> : critère d'attribution de la plage IP à une entité</em></caption><br />
+</p>
+<p align=center>
+<img alt="Action IP-entité" src="../img/multiSites/actionEntite.png" title="action IP-entité" /><br />
+<caption><em><strong>figure</strong> : action pour assigner la plage IP à une entité</em></caption>
+</p></p>
+<p>Cela va pouvoir permettre la gestion des entités par des administrateurs distincts. Un super-admin pourra ainsi administrer tout le parc et un admin peut être assigné à une sous-entité, donc son site.<br />
+Pour assigner un administrateur à une entité, se rendre sur l'entité à modifier puis dans l'onglet <em>Utilisateurs</em> et ajouter un utilisateur déjà créé. Dans le cas d'un nouvel utilisateur, le créer au préalable dans <em>Administration &gt; Utilisateurs</em>.
+<p align=center>
+<img alt="Utilisateur entité" src="../img/multiSites/utilisateurEntite.png" title="utilisateur entité" /><br />
+<caption><em><strong>figure</strong> : ajout d'un utilisateur à l'entité</em></caption>
+</p></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../deploiementAppli/" class="btn btn-neutral float-right" title="Déploiement d'une application">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../decouvInv/" class="btn btn-neutral" title="Découverte et inventaire réseau"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../decouvInv/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../deploiementAppli/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

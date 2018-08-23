@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Mises à jour - GLPI for N'Py</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Mises \u00e0 jour";
+    var mkdocs_page_input_path = "maj.md";
+    var mkdocs_page_url = "/maj/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> GLPI for N'Py</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installLAMP/">Installation de LAMP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installGLPI/">Installation de GLPI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installFI/">Installation de FusionInventory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../agentsFI/">Déploiement des agents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../decouvInv/">Découverte et inventaire réseau</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../multiSites/">Gestion du multi-sites</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../deploiementAppli/">Déploiement d'une application</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../gestionGenerale/">Gestion générale</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Mises à jour</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mises-a-jour">Mises à jour</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#mise-a-jour-de-glpi">Mise à jour de GLPI</a></li>
+        
+            <li><a class="toctree-l3" href="#mise-a-jour-de-fusioninventory">Mise à jour de FusionInventory</a></li>
+        
+            <li><a class="toctree-l3" href="#mise-a-jour-des-agents">Mise à jour des agents</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../plugins/">Plugins supplémentaires</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">GLPI for N'Py</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Mises à jour</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mises-a-jour">Mises à jour</h1>
+<h2 id="mise-a-jour-de-glpi">Mise à jour de GLPI</h2>
+<p>Les versions de GLPI et de FusionInventory sont très liées. Il faut d'abord mettre à jour GLPI. Pour cela, se rendre dans <em>Administration &gt; Maintenance</em> et sauvegarder la base de données en SQL. Puis dans /var/www/glpi créer un dossier "ancien" et y glisser tous les dossiers et fichiers contenus dans /var/www/glpi à l'exception du dossier "plugins". Après le téléchargement de la dernière version, extraire le dossier dans /var/www/glpi et se connecter à localhost/glpi. Suivre les étapes en sélectionnant "Mettre à jour" puis choisir la base de données à utiliser.
+<p align=center>
+<img alt="MàJ GLPI" src="../img/maj/majGLPI.png" title="màj GLPI" /><br />
+<caption><em><strong>figure</strong> : mise à jour de la base "glpi"</em></caption>
+</div></p>
+<h2 id="mise-a-jour-de-fusioninventory">Mise à jour de FusionInventory</h2>
+<p>La mise à jour de GLPI est terminée, celle de FusionInventory peut être traitée. Tout d'abord, télécharger la dernière version sur le Git et la décompresser dans le dossier /var/www/glpi/plugins/. Puis se rendre sur GLPI et dans <em>Administration &gt; Plugins</em> puis mettre à jour FusionInventory.
+<p align=center>
+<img alt="MàJ FI" src="../img/maj/majFI.png" title="màj FI" /><br />
+<caption><em><strong>figure</strong> : mise à jour de FusionInventory</em></caption>
+</p></p>
+<h2 id="mise-a-jour-des-agents">Mise à jour des agents</h2>
+<h3 id="mise-a-jour">Mise à jour</h3>
+<p>Concernant la mise à jour des agents, celle-ci peut se faire via une tâche de déploiement. Les agents seront remplacés par la nouvelle version au prochain inventaire de l’ordinateur. Un script, fourni par la communauté à <a href="https://raw.githubusercontent.com/fusinv/fusioninventory-agent/2.3.x/contrib/windows/fusioninventory-agent-deployment.vbs">cette adresse</a>, permet de remplacer l’ancienne version de l’agent. Il est nécessaire de paramétrer le script avec les versions de l’agent et de Windows grâce aux différentes variables Setup.</p>
+<p>Sous Linux, il est possible d'exécuter la commande : <code>sudo apt-get install fusioninventory-agent</code>.</p>
+<h3 id="suppression">Suppression</h3>
+<p>Pour Linux, l'exécution de <code>sudo apt purge fusioninventory-agent</code> supprimera l'agent installé et tous ses fichiers de configuration.<br />
+Sous Mac, l'exécution de <code>sudo /opt/fusioninventory-agent/uninstaller.sh</code> permettra de supprimer l'agent installé.<br />
+Windows permet quant à lui la désinstallation via le panneau de configuration, dans l'option "désinstaller programme".</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../plugins/" class="btn btn-neutral float-right" title="Plugins supplémentaires">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gestionGenerale/" class="btn btn-neutral" title="Gestion générale"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gestionGenerale/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../plugins/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
